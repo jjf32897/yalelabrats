@@ -14,7 +14,7 @@ def index(request):
 		data = graph.get('384063111614994/feed')
 		messages = [post for post in data['data']]
 
-		render(request, 'index.html', {'user': request.user, 'posts': messages})
+		return render(request, 'index.html', {'user': request.user, 'posts': messages})
 
 	else:
 		return render(request, 'index.html', {'user': request.user})
