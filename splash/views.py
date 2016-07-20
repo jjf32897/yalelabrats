@@ -12,7 +12,7 @@ def index(request):
 
 		# gets the messages of the first 25 posts
 		data = graph.get('384063111614994/feed')
-		messages = [post for post in data['data']]
+		messages = [post for post in data['data'] if "participat" in post['message'] or "experiment" in post['message']]
 
 		return render(request, 'index.html', {'user': request.user, 'posts': messages})
 
