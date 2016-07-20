@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
-    'yalestudies',
 ]
 
 MIDDLEWARE_CLASSES = [
