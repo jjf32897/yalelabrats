@@ -16,6 +16,13 @@
           <li> {{ post.message }}</li>
         {% endfor %}
       </ul>
+      {% if previous >= 0 %}
+      <a href="/?page={{ previous }}">previous page</a>
+      {% endif %}
+
+      {% if next != None %}
+      <a href="/?page={{ next }}">next page</a>
+      {% endif %}
     </p>
   </div>
 {% endblock %}
